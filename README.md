@@ -1,5 +1,5 @@
 # go2go
-Docker image to experiment with go2
+Docker image to experiment with go2. A build of the `dev.go2go` branch of [Go](https://github.com/golang/go).
 
 As a convenience do `alias go2go='docker run --rm -v $(pwd):/home/gopher/go <image> go2go tool go2go`.
 
