@@ -16,9 +16,8 @@ RUN wget -q https://dl.google.com/go/go1.4-bootstrap-20171003.tar.gz -O gobootst
 
 ENV GOROOT_BOOTSTRAP=/tmp/gobootstrap
 
-RUN git clone https://github.com/golang/go --depth=1 --no-single-branch \
+RUN git clone https://github.com/golang/go -b dev.go2go --depth=1 \
     && cd go/src/ \
-    && git checkout dev.go2go \
     && ./make.bash
 
 
