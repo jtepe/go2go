@@ -25,7 +25,14 @@ FROM debian:stretch
 
 COPY --from=builder /tmp/go /opt/
 
-WORKDIR /tmp
+RUN mkdir -p /home/gopher/go /home/gopher/.cache \
+    && chown -R 1000:1000 /home/gopher
+
+WORKDIR /home/gopher/go
+
+USER 1000:1000
+
+ENV GOCACHE /home/gopher/.cache
 
 ENTRYPOINT ["/opt/bin/go"]
 
