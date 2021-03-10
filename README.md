@@ -1,7 +1,8 @@
 # go2go
-Docker image to experiment with go2. A build of the `dev.go2go` branch of [Go](https://github.com/golang/go).
+Container image to experiment with go2. A build of the `dev.go2go` branch of [Go](https://github.com/golang/go).
 
-As a convenience do `alias go2go='docker run --rm -v $(pwd):/home/gopher/go <image> go2go tool go2go`.
+As a convenience do `alias go2go='podman run --rm -v $(pwd):/home/gopher/go <image> tool go2go`. Or use `docker` instead
+of `podman`, if you prefer.
 
 After this simply run `go2go run main.go2` for your Go2 source in `main.go2`. BAM.
 
